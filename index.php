@@ -1,7 +1,7 @@
 <?php
 
 ! file_exists(__DIR__ . '/key') && response(500, 'key not found');
-$key = file_get_contents(__DIR__ . '/key');
+$key = trim(file_get_contents(__DIR__ . '/key'));
 
 $title = $_REQUEST['title'] ?? '空白标题';
 $content = $_REQUEST['content'] ?? '空白内容';
